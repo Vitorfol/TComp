@@ -9,16 +9,26 @@ class Automata:
         self.final_states = final_states
         self.deterministic = deterministic
 
-    def save_as_txt(self, path=None):
-        if path is None:
-            nome_arquivo = 'afd.txt' if self.deterministic else 'afn.txt'
-            dir_atual = os.path.dirname(os.path.abspath(__file__))
-            pasta_filestxt = os.path.abspath(os.path.join(dir_atual, '..', '..', 'filestxt'))
-            os.makedirs(pasta_filestxt, exist_ok=True)
-            path = os.path.join(pasta_filestxt, nome_arquivo)
+    def save_as_txt(self, name=None):
+        if name is None:
+            name = 'afd' if self.deterministic else 'afn'
 
+        filename = f"{name}.txt"
+        
+        dir_atual = os.path.dirname(os.path.abspath(__file__))
+        pasta_filestxt = os.path.abspath(os.path.join(dir_atual, '..', '..', 'filestxt'))
+        os.makedirs(pasta_filestxt, exist_ok=True)
+        path = os.path.join(pasta_filestxt, filename)
+        
+        tipo_map = {
+            'afn.txt': 'AFN Original',
+            'afd.txt': 'AFD Determinizado',
+            'comp.txt': 'AFD Complemento',
+            'rev.txt': 'AFD Reverso',
+        }
+        tipo = tipo_map.get(filename.lower(), 'Autômato Finito')
+        
         with open(path, 'w', encoding='utf-8') as f:
-            tipo = 'AFD Determinizado' if self.deterministic else 'AFN Original'
             f.write(f"{tipo}\n\n")
             f.write("Q:\n")
             for estado in self.state_set:
