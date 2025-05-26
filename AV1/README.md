@@ -32,7 +32,7 @@ automato_simulador/
 │
 ├── implementation/
 │   ├── automatas/           # Representação dos autômatos e parser da gramática
-│   │   ├── glud_parser.py   # Conversão de GLUD para AFN
+│   │   ├── glud_parser.py   # Conversão de GLUD para AFN   
 │   │   ├── af.py            # Classe e estrutura de AF's em geral
 │   │
 │   ├── algoritmos/          # Algoritmos de manipulação dos autômatos
