@@ -9,7 +9,7 @@ def determinize(automata: Automata) -> Automata:
     initial_closure = frozenset(eclose(automata.initial_state, nfa_transition_function))
     unprocessed_states = deque([initial_closure])
     dfa_transition_function = {}
-    state_name_map = {initial_closure: "{" + ",".join(sorted(initial_closure)) + "}"}
+    state_name_map = {initial_closure: "{" + ",".join(initial_closure) + "}"}
 
     while unprocessed_states:
         current = unprocessed_states.popleft()
@@ -24,7 +24,7 @@ def determinize(automata: Automata) -> Automata:
 
             reachable_frozen = frozenset(reachable)
             if reachable_frozen not in state_name_map and reachable:
-                state_name_map[reachable_frozen] = "{" + ",".join(sorted(reachable_frozen)) + "}"
+                state_name_map[reachable_frozen] = "{" + ",".join(reachable_frozen) + "}"
                 unprocessed_states.append(reachable_frozen)
 
             if reachable:
