@@ -4,10 +4,10 @@ def glud_parser(glud):
     states= set(glud['variables'])
     alphabet = set(glud['terminals'])
     initial_state = glud['initial_state']
-    final_states = set()
-    transitions = dict()
+    final_states = set(['F'])
+    transitions = {}
+    states.add('F')  
 
-    final_states.add('F')
     for prod in glud['productions']:
         esquerda, direita = prod.split('->')
         esquerda = esquerda.strip()
@@ -25,7 +25,7 @@ def glud_parser(glud):
         else:
             continue
         if esquerda not in transitions:
-            transitions[esquerda] = dict()
+            transitions[esquerda] = {}
         if simbolo not in transitions[esquerda]:
             transitions[esquerda][simbolo] = set()
         

@@ -1,6 +1,6 @@
 
 def read_glud():
-    path = '../filestxt/in.txt'
+    path = 'filestxt/in.txt'
     with open(path, 'r', encoding='utf-8') as file:
         lines = file.readlines()[2:]
     

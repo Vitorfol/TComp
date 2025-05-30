@@ -40,8 +40,11 @@ class Automata:
             for estado in self.transition_function:
                 for simbolo in self.transition_function[estado]:
                     destinos = self.transition_function[estado][simbolo]
-                    for destino in destinos:
-                        f.write(f"δ({estado}, {simbolo}) → {destino}\n")
+                    if isinstance(destinos, set):
+                        for destino in destinos:
+                            f.write(f"δ({estado}, {simbolo}) → {destino}\n")
+                    else:
+                        f.write(f"δ({estado}, {simbolo}) → {destinos}\n")
             f.write(f"\nq0:\n{self.initial_state}\n")
             f.write("\nF:\n")
             for final in self.final_states:
