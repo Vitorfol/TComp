@@ -1,15 +1,14 @@
 AFD Reverso
 
 Q:
-{S,F}
-{A}
 qF
 {∅}
+{S,F}
+{A}
 
 Σ:
-a
 b
-ε
+a
 
 δ:
 δ(qF, ε) → {S,F}

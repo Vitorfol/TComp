@@ -5,7 +5,6 @@ def reverse(automata: Automata) -> Automata:
 
     states = set(automata.state_set)
     alphabet = set(automata.alphabet)
-    alphabet.add('ε')  
 
     new_initial_state = 'qF'
     states.add(new_initial_state)
