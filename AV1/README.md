@@ -23,12 +23,11 @@ automato_simulador/
 │
 ├── main.py                  # Arquivo principal, controla o fluxo geral
 ├── filestxt/                # Arquivos de entrada e saída
-│   ├── entrada.txt          # Entrada: gramática GLUD e cadeia
+│   ├── in.txt               # Entrada: gramática GLUD e cadeia
 │   ├── afn.txt              # AFN gerado após conversão da gramática
 │   ├── afd.txt              # AFD após determinização do AFN
-│   ├── rev.txt              # AFD reverso
+│   ├── rev.txt              # AFN reverso
 │   ├── comp.txt             # AFD complemento
-│   └── sim.txt              # Resultado da simulação da cadeia
 │
 ├── implementation/
 │   ├── automatas/           # Representação dos autômatos e parser da gramática
@@ -37,9 +36,28 @@ automato_simulador/
 │   │
 │   ├── algoritmos/          # Algoritmos de manipulação dos autômatos
 │   │   ├── determinization.py # Algoritmo de determinização: AFN → AFD
-│   │   ├── reverse.py        # Algoritmo para reversão do AFD
+│   │   ├── reverse.py       # Algoritmo para reversão do AFD
 │   │   ├── complement.py    # Algoritmo para complemento do AFD
-│   │   └── simulation.py      # Simulação da cadeia de entrada
+│   │   └── simulation.py    # Simulação da cadeia de entrada
 │   │
 │   └── utils/
-│       └── io.py             # Leitura e escrita dos arquivos .txt
+│       └── input_processor.py  # Processa e devolve como GLUD o arquivo de entrada
+```
+
+---
+
+## ▶️ Como Executar
+
+1. No terminal, navegue até a pasta do projeto:
+
+```powershell
+cd AV1
+```
+
+2. Execute o arquivo principal passando na cli a cadeia que deseja testar, como por exemplo:
+
+```powershell
+python main.py ababa
+```
+
+3. Os arquivos de entrada e saída estarão na pasta `filestxt/`.

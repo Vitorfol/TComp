@@ -1,26 +1,26 @@
-AFD Reverso
+AFN Reverso
 
 Q:
+{F,S}
+{A}
 qF
 {∅}
-{S,F}
-{A}
 
 Σ:
 b
 a
 
 δ:
-δ(qF, ε) → {S,F}
-δ({A}, a) → {S,F}
-δ(∅, b) → {S,F}
+δ(qF, ε) → {F,S}
+δ({A}, a) → {F,S}
+δ(∅, b) → {F,S}
 δ(∅, b) → ∅
 δ(∅, a) → {A}
 δ(∅, a) → ∅
-δ({S,F}, b) → {A}
+δ({F,S}, b) → {A}
 
 q0:
 qF
 
 F:
-{S,F}
+{F,S}

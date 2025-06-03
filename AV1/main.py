@@ -1,6 +1,6 @@
 import os
 import sys
-from utils.io import read_glud
+from utils.input_processor import read_glud
 from implementation.automatas.glud_parser import glud_parser
 from implementation.algorithms.determinization import determinize
 from implementation.algorithms.simulation import simulate_afd

@@ -1,9 +1,9 @@
 AFN Original
 
 Q:
-A
-S
 F
+S
+A
 
 Σ:
 b

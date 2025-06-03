@@ -24,7 +24,7 @@ class Automata:
             'afn.txt': 'AFN Original',
             'afd.txt': 'AFD Determinizado',
             'comp.txt': 'AFD Complemento',
-            'rev.txt': 'AFD Reverso',
+            'rev.txt': 'AFN Reverso',
         }
         tipo = tipo_map.get(filename.lower(), 'Autômato Finito')
         
