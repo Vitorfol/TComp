@@ -1,0 +1,21 @@
+AFN Original
+
+Q:
+F
+S
+A
+
+Σ:
+a
+b
+
+δ:
+δ(S, a) → A
+δ(S, ε) → F
+δ(A, b) → S
+
+q0:
+S
+
+F:
+F

@@ -1,6 +1,6 @@
 from implementation.automatas.af import Automata
 
-def complement(automata: Automata):
+def complement(automata: Automata) -> Automata:
     alphabet = automata.alphabet
     initial_state = automata.initial_state
     transitions = automata.transition_function
