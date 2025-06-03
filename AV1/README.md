@@ -10,9 +10,9 @@ O programa realiza as seguintes etapas:
 
 1. **Conversão da Gramática (GLUD) em AFN** (Autômato Finito Não Determinístico).  
 2. **Determinização do AFN para obter um AFD** (Autômato Finito Determinístico).  
-3. Aplicação das operações de **reverso** e **complemento** no AFD.  
-4. Simulação da execução de uma cadeia de entrada no AFD.  
-5. Geração de arquivos `.txt` contendo os resultados de cada etapa.
+3. Aplicação das operações de **reverso** e **complemento** no AFD, resultando em um AFN e um AFD, respectivamente.  
+4. **Simulação da execução** de uma cadeia de entrada. 
+5. Geração de arquivos `.txt` contendo a formalização do AF de cada etapa.
 
 ---
 
@@ -60,4 +60,7 @@ cd AV1
 python main.py ababa
 ```
 
-3. Os arquivos de entrada e saída estarão na pasta `filestxt/`.
+3. O aceite ou rejeite da cadeia será exibido no terminal.
+
+4. Os arquivos de entrada e saída estarão na pasta `filestxt/`.
+
